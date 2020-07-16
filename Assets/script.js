@@ -73,11 +73,9 @@ $(document).ready(function () {
                 url: currentUvi,
                 method: "GET"
             }).then(function (response) {
-    
-    
                 console.log(response, "yay");
-    
-    
+                $('#uv').text(response.value)
+
             });
 
         });
