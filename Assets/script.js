@@ -76,7 +76,7 @@ $(document).ready(function () {
             //Displays openweather icons that match the weather for each forecast
             const todayIcon = response.weather[0].icon;
             // console.log(todayIcon);
-            $('#iconToday').html(`<img src="http://openweathermap.org/img/w/${todayIcon}.png"></img>`)
+            $('#iconToday').html(`<img src="https://openweathermap.org/img/w/${todayIcon}.png"></img>`)
 
             //this then places the lat and lon for into the uvi URL
             const lat = response.coord.lon;
