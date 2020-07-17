@@ -1,16 +1,7 @@
 $(document).ready(function () {
-    console.log("ready!");
+    // console.log("ready!");
     $("#cityBtns").empty();
-    const sBtn = $('#sBtn')
-    const key = $('#searchBox')
-
-    key.on('keyup', function () {
-        console.log(key.text);
-        sBtn.disabled = !key.value;
-    });
-
-
-
+   
     const lastCity = localStorage.getItem('lastCity');
     $('#searchBox').val(lastCity);
     const cities = [];
@@ -61,7 +52,7 @@ $(document).ready(function () {
             url: currentURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
+            // console.log(response);
             // PLaces JSON data from API into elements
             $('#citySearch').text(response.name);
             const unix = response.dt;
@@ -90,10 +81,10 @@ $(document).ready(function () {
             //this then places the lat and lon for into the uvi URL
             const lat = response.coord.lon;
             const lon = response.coord.lat;
-            console.log(lon)
-            console.log(lat)
+            // console.log(lon)
+            // console.log(lat)
             const currentUvi = `https://api.openweathermap.org/data/2.5/uvi?appid=a8fecac46b320f94a3eca3d84b946ced&lat=${lon}&lon=${lat}`;
-            console.log(currentUvi)
+            // console.log(currentUvi)
 
             //UVI ajax call had to be placed inside the other ajax call for today's weather, because I wasn't sure
             // how to pass that information into the other URL any other way. This causes the UVI to render last,
@@ -102,7 +93,7 @@ $(document).ready(function () {
                 url: currentUvi,
                 method: "GET"
             }).then(function (response) {
-                console.log(response, "yay");
+                // console.log(response, "yay");
                 $('#uv').text(response.value)
             });
 
