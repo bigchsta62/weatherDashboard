@@ -111,28 +111,28 @@ $(document).ready(function () {
             // I would have put this in a for a loop, but I was crunched for time and this works
             $('#temp2').text(Math.floor(((response.list[6].main.temp_max) - 273.15) * 1.8 + 32));
             const day2 = response.list[6].weather[0].icon;
-            $('#icon2').html(`<img src="http://openweathermap.org/img/w/${day2}.png"></img>`)
+            $('#icon2').html(`<img src="https://openweathermap.org/img/w/${day2}.png"></img>`)
             $('#humid2').text(response.list[6].main.humidity);
 
 
             $('#temp3').text(Math.floor(((response.list[13].main.temp_max) - 273.15) * 1.8 + 32));
             const day3 = response.list[13].weather[0].icon;
-            $('#icon3').html(`<img src="http://openweathermap.org/img/w/${day3}.png"></img>`)
+            $('#icon3').html(`<img src="https://openweathermap.org/img/w/${day3}.png"></img>`)
             $('#humid3').text(response.list[13].main.humidity);
 
             $('#temp4').text(Math.floor(((response.list[21].main.temp_max) - 273.15) * 1.8 + 32));
             const day4 = response.list[21].weather[0].icon;
-            $('#icon4').html(`<img src="http://openweathermap.org/img/w/${day4}.png"></img>`)
+            $('#icon4').html(`<img src="https://openweathermap.org/img/w/${day4}.png"></img>`)
             $('#humid4').text(response.list[21].main.humidity);
 
             $('#temp5').text(Math.floor(((response.list[29].main.temp_max) - 273.15) * 1.8 + 32));
             const day5 = response.list[29].weather[0].icon;
-            $('#icon5').html(`<img src="http://openweathermap.org/img/w/${day5}.png"></img>`)
+            $('#icon5').html(`<img src="https://openweathermap.org/img/w/${day5}.png"></img>`)
             $('#humid5').text(response.list[29].main.humidity);
 
             $('#temp6').text(Math.floor(((response.list[37].main.temp_max) - 273.15) * 1.8 + 32));
             const day6 = response.list[37].weather[0].icon;
-            $('#icon6').html(`<img src="http://openweathermap.org/img/w/${day6}.png"></img>`)
+            $('#icon6').html(`<img src="https://openweathermap.org/img/w/${day6}.png"></img>`)
             $('#humid6').text(response.list[37].main.humidity);
 
         });
