@@ -25,10 +25,10 @@
 
         <div class="container-fluid">
             <div class="row">
-                <nav class="col-md-2 d-none d-md-block bg-light sidebar justigy-content-left">
-                    <div class="sidebar-sticky">
+                <nav class="col-md-3 d-md-block bg-light sidebar justigy-content-left">
+                    <div class="sidebar-sticky" id="sticky">
                         <ul class="nav flex-column">
-                            <h5>Search for A City</h5>
+                            <h5>Find A City</h5>
                             <li class="nav-item">
 
                                 <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
@@ -38,28 +38,20 @@
                                         <button type="submit" class="btn btn-secondary" id="sBtn"><i
                                                 class="icon fa fa-search"></i></button>
                                     </div>
-                                    <div class="input-group">
-
-                                        </a>
+                                </div>
                             </li>
-                        </ul>
-                        <div class="card">
 
-                            <ul class=" list-group list-group-flush">
-                                <button class="list-group-item" id="lastCity1"></button>
-                                <li class="list-group-item" id="lastCity2" hidden></li>
-                                <li class="list-group-item" id="lastCity3" hidden></li>
-                                <li class="list-group-item" id="lastCity4" hidden></li>
-                                <li class="list-group-item" id="lastCity5" hidden></li>
-                                <li class="list-group-item" id="lastCity6" hidden></li>
-                                <li class="list-group-item" id="lastCity7" hidden></li>
-                                <li class="list-group-item" id="lastCity7" hidden></li>
-                            </ul>
-                        </div>
+                        </ul>
+
+                        <p>Previous City</p>
+                        <ul id="cityBtns">
+                            <button class="col-6 btn btn-light text-light mb-2" id="lastCity1"></button>
+                        </ul>
+                            
                     </div>
 
                 </nav>
-                <div class="col-md-10 jumbotron jumbotron-fluid">
+                <div class="col-md-9 jumbotron jumbotron-fluid">
                     <div class="container" id="today">
                         <h1 class="display-4" id="citySearch">---</h1>
                         <p id="iconToday"></p>
@@ -70,8 +62,8 @@
                     </div>
                     <div class="container" id="fiveDay">
                         <h2>5 Day Forecast:</h2>
-                        <div class="card-deck">
-                            <div class="card">
+                        <div class="card-group">
+                            <div class="card" style="min-width: 10rem">
                                 <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title" id="day2">Day 2</h5>
@@ -81,7 +73,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" style="min-width: 10rem">
                                 <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title" id="day3">Day 3</h5>
@@ -91,7 +83,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" style="min-width: 10rem">
                                 <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title" id="day4">Day 4</h5>
@@ -101,7 +93,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" style="min-width: 10rem">
                                 <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title" id="day5">Day 5</h5>
@@ -112,7 +104,7 @@
 
                                 </div>
                             </div>
-                            <div class="card">
+                            <div class="card" style="min-width: 10rem">
                                 <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title" id="day6">Day 6</h5>
