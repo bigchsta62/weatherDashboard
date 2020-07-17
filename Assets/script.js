@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // console.log("ready!");
     $("#cityBtns").empty();
-   
+
     const lastCity = localStorage.getItem('lastCity');
     $('#searchBox').val(lastCity);
     const cities = [];
@@ -42,6 +42,8 @@ $(document).ready(function () {
 
         displayWeatherInfo(currentURL, fiveDayURL);
         localStorage.setItem('lastCity', searchText);
+        $('#searchBox').val(' ');
+
     }
 
     // displayWeatherInfo function re-renders the HTML to display the appropriate content
@@ -58,13 +60,14 @@ $(document).ready(function () {
             const unix = response.dt;
             const milli = unix * 1000;
             const date = new Date(milli);
-            const readable = date.toLocaleString("en-US",{
+            const readable = date.toLocaleString("en-US", {
                 weekday: "long",
                 month: "long",
                 day: "numeric",
-                year: "numeric"});
-                
-            
+                year: "numeric"
+            });
+
+
 
             $('#date').text(readable);
 
@@ -72,6 +75,12 @@ $(document).ready(function () {
             $('#humid').text(response.main.humidity);
             $('#wind').text(response.wind.speed);
             $('#uv').text(response.name);
+
+
+
+
+
+
 
             //Displays openweather icons that match the weather for each forecast
             const todayIcon = response.weather[0].icon;
@@ -95,6 +104,25 @@ $(document).ready(function () {
             }).then(function (response) {
                 // console.log(response, "yay");
                 $('#uv').text(response.value)
+                console.log(response.value);
+                //changes background color based on uv index value
+                if (response.value <= 5 && response.value >= 3) {
+                    console.log('true')
+                    $('#uv').css('background-color', 'yellow');
+                }
+                if (response.value <= 7 && response.value >= 6) {
+                    console.log('greater');
+                    $('#uv').css('background-color', 'orange');
+                }
+                if (response.value < 11 && response.value >= 8) {
+                    console.log('greater');
+                    $('#uv').css('background-color', 'red');
+                }
+                if (response.value > 11) {
+                    console.log('greater');
+                    $('#uv').css('background-color', 'violet');
+                }
+               
             });
 
 
